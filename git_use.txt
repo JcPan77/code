@@ -1,0 +1,43 @@
+#-- git关联github --#
+# 创建SSH Key
+1、用户目录下的.ssh文件id_rsa(私钥)与id_rsa.pub (公钥)  取出公钥ssh key
+注：如果没有ssh key的文件可以使用如下命令创建密钥：
+ssh-keygen -t rsa -C j.c.pan@outlook.com
+2、登录github，右上角：设置→settings-SSH and GPR keys→New SSH key，然后输入你的标题，输入上面的公钥，然后点击保存
+# 配置用户信息
+git config --global user.email "j.c.pan@outlook.com"
+git config --global user.name "JcPan77"
+
+# 关联仓库
+git remote add origin https://github.com/JcPan77/code.git
+或者
+ssh -T git@github.com:JcPan77/code.git
+
+# 建立git仓库 即将某个文件里为本地的git仓库     --.git文件
+git init
+# 将文件提交到暂存区
+git add
+# 将暂存区的文件提交到仓库(单引号文件为注释）
+git commit -m ‘Fisrt'
+# 检查当前文件的状态
+git status
+# 查看文件的修改内容
+git diff
+
+# 获得历史修改记录
+git log
+# 使记录只显示主要的内容，一行显示
+git log --pretty=oneline demo.txt
+
+# 版本回退 
+## 回退到上一个版本
+git reset --hard HEAD^
+## 获取历史版本
+git reflog
+## 回退到某个版本号对应的版本 
+git reset --hard 版本号
+## 回退到上上个版本
+git reset --hard HEAD^^
+## 回退到100个版本前
+git reset --hard HEAD~100
+
