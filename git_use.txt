@@ -7,11 +7,12 @@ ssh-keygen -t rsa -C j.c.pan@outlook.com
 # 配置用户信息
 git config --global user.email "j.c.pan@outlook.com"
 git config --global user.name "JcPan77"
+注：如果想要取消掉当前的用户重新设置新的用户名和邮箱可以使用git config --global --unset user.name "想要取消的用户名"，git config --global --unset user.email "
 
 # 关联仓库
 git remote add origin https://github.com/JcPan77/code.git
 或者
-ssh -T git@github.com:JcPan77/code.git
+ssh -T git@github.com
 
 # 建立git仓库 即将某个文件里为本地的git仓库     --.git文件
 git init
