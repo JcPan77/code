@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #-- git关联github --#
 # 创建SSH Key
 1、用户目录下的.ssh文件id_rsa(私钥)与id_rsa.pub (公钥)  取出公钥ssh key
@@ -42,3 +43,7 @@ git reset --hard HEAD^^
 ## 回退到100个版本前
 git reset --hard HEAD~100
 
+=======
+# 建立git仓库
+git init
+>>>>>>> 36cac3e8827f19a615af2ec680f20b8817e8bdc2
